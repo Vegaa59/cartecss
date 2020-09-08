@@ -1,60 +1,66 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.formation{
+.formation {
     background-color: rgb(0, 70, 128);
+    display: flex;
+    justify-content: center;
 }
 
-.contenuformation{
-    
+.contenuformation {
+    width: auto;
+    margin-top: 50px;
 }
 
-.bloccarte{
+.bloccarte {
     display: flex;
 }
 
-.cercle{
+.cercle {
     width: 170px;
     height: 170px;
     background-color: rgb(255, 113, 19);
     border-radius: 50%;
     margin-right: 60px;
-    -webkit-box-shadow: 6px 6px 28px -10px rgba(0,0,0,0.75);
--moz-box-shadow: 6px 6px 28px -10px rgba(0,0,0,0.75);
-box-shadow: 6px 6px 28px -10px rgba(0,0,0,0.75);
 }
-.cercle:hover{
+
+.cercle:hover {
     background-color: rgb(255, 142, 66);
-    transition: 0,5s;
-    transform: scale(1.1); 
+    transition: 0, 5s;
 }
-.date{
+
+.date {
     text-align: center;
     font-size: 30px;
     margin-top: 55px;
 }
-.bloccarte{
-    margin-bottom: 20px;
+
+.bloccarte {
+    margin-bottom: 50px;
 }
-.carte{
+
+.carte {
     background-color: rgb(255, 255, 255);
     border-radius: 20px 20px;
     padding: 30px;
     width: 800px;
-    text-align: center;
-    -webkit-box-shadow: 6px 6px 28px -10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 6px 6px 28px -10px rgba(0,0,0,0.75);
-    box-shadow: 6px 6px 28px -10px rgba(0,0,0,0.75);
-}
-.carte:hover{ 
-        filter: brightness(85%);
-        -webkit-filter: brightness(85%);
-        transition: 1s;
+    text-align: left;
 }
 
-.arrow{
+.carte h2 {
+    margin-bottom: 10px;
+}
+
+.carte:hover {
+    filter: brightness(85%);
+    -webkit-filter: brightness(85%);
+    transition: 1s;
+}
+
+.arrow {
     margin-top: 20px;
     height: 20px;
     width: 15px;
@@ -62,14 +68,60 @@ box-shadow: 6px 6px 28px -10px rgba(0,0,0,0.75);
     clip-path: polygon(100% 0, 0 50%, 100% 100%);
     z-index: 1;
 }
-.liseret{
-    background-color:rgb(255, 113, 19);
+
+.liseret {
+    background-color: rgb(255, 113, 19);
     width: 1px;
-    height: 250px;
+    height: 850px;
     position: absolute;
-    margin-left: 200px;
-    }
-    .date h5 {
-        color: #fff;
+    margin-left: 220px;
+}
+
+.date h5 {
+    color: #fff;
+}
+
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.competence {
+    background-color: rgb(255, 113, 19);
+    border-radius: 20px 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.competence p {
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+    .bloccarte {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
+    .liseret {
+        display: none;
+    }
+
+    .carte {
+        width: auto;
+    }
+
+    .arrow {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        margin: auto;
+        height: 8px;
+        margin-top: 10px;
+    }
+
+    .cercle {
+        margin: auto;
+    }
+}
